@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>JVLHC</title>
+  <%= favicon_link_tag "glyph.jpg" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -24,16 +25,81 @@
         <li><%= link_to "Jimmy Valentine's", '#'%></li>
      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Calendar" %></li>
-        <li><%= link_to "Beer List" %></li>
+        <li><%= link_to "Calendar", "#calendarModal", :data => {:toggle => "modal"} %></li>
+        <li><%= link_to "Beer List", "#beerlistModal", :data => {:toggle => "modal"} %></li>
         <li><%= link_to "Photos", "#photoModal", :data => {:toggle => "modal"} %></li>
-        <li><%= link_to "DJ Info" %></li>
+        <li><%= link_to "DJ Info", "#djModal", :data => {:toggle => "modal"} %></li>
       </ul>
     </div> 
   </div> 
 </div> 
 
-<!-- Modal -->
+<!-- DJ Modal-->
+<div class="modal fade" id="djModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">DJ Info</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Beer List Modal -->
+<div class="modal fade" id="beerlistModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Beer List</h4>
+      </div>
+      <div class="modal-body">
+	<table>
+          <tr>
+            <td>Amstel Light / $6</td>
+            <td>Great Lakes Edmund Fitzgerald Porter / $6</td>
+          </tr>
+          <tr>
+            <td>New Belgium Brewing Trippel – 22 oz / $12</td>
+            <td>Belhaven Scottish Ale (pub draft can) – 14.9 oz / $6</td>
+          </tr>
+        </table> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Calendar Modal -->
+<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Calendar</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Photo Modal -->
 <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
   <div class="modal-dialog">
     <div class="modal-content">
