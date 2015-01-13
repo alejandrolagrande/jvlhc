@@ -26,13 +26,76 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Calendar" %></li>
         <li><%= link_to "Beer List" %></li>
-        <li><%= link_to "Contact Us" %></li>
+        <li><%= link_to "Photos", "#photoModal", :data => {:toggle => "modal"} %></li>
         <li><%= link_to "DJ Info" %></li>
       </ul>
-    </div> <!-- end div class="collapse navbar-collapse" -->
-  </div> <!-- end div class="container" -->
-</div> <!-- end div class="navbar navbar-default navbar-fixed-top" -->
+    </div> 
+  </div> 
+</div> 
 
+<!-- Modal -->
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Photos</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href="#">
+              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <%= yield %>
 
 </body>
