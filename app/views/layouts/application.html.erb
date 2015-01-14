@@ -21,8 +21,7 @@
     </div> <!-- end div class="navbar-header" -->
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-left">
-        <li><%= image_tag "jv_02_f.jpg", size: "48" %></li>
-        <li><%= link_to "Jimmy Valentine's", '#'%></li>
+        <li class="skull-padding"><%= image_tag "jv_02_f.jpg", size: "36" %></li>
      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Calendar", "#calendarModal", :data => {:toggle => "modal"} %></li>
@@ -62,7 +61,7 @@
         <h4 class="modal-title" id="myModalLabel">Beer List</h4>
       </div>
       <div class="modal-body">
-	<table>
+	<table class="table table-striped">
           <tr>
             <td>Amstel Light / $6</td>
             <td>Great Lakes Edmund Fitzgerald Porter / $6</td>
@@ -70,6 +69,85 @@
           <tr>
             <td>New Belgium Brewing Trippel – 22 oz / $12</td>
             <td>Belhaven Scottish Ale (pub draft can) – 14.9 oz / $6</td>
+          </tr>
+          <tr>
+            <td>Guiness (pub draft can) – 14.9 oz / $6</td>
+            <td>North Coast Red Seal Ale / $6</td>
+          </tr>
+          <tr>
+	    <td>Blackthorne Cider – 16.9 oz / $6</td>
+            <td>Gouden Carolus Grand Cru of the Emperor – 26 oz (11%) / $15</td>
+          </tr>
+          <tr>
+            <td>Orkney Skullplitter Ale (8.5%) / $8</td>
+            <td>Blanche de Bruxelles – 16.9 oz / $6</td>
+          </tr>
+          <tr>
+            <td>Gouden Carolus Classic (8.5%) / $8</td>
+            <td>Pabst Blue Ribbon – 16 oz / $5</td>
+          </tr>
+          <tr>
+            <td>Chimay Red (8%) / $9</td>
+            <td>Harviestoun Old Engine Oil / $8</td>
+          </tr>
+          <tr>
+            <td>Samuel Smith’s Oatmeal Stout / $7</td>
+            <td>Chimay Blue (9%) / $10</td>
+          </tr>
+	  <tr>
+            <td>Heineken / $6</td>
+            <td>Schlitz Blue Bull – 40 oz / $12</td>
+          </tr>
+          <tr>
+            <td>DC Brau (all cans) / $6</td>
+            <td>Kasteel Tripel (11%) / $8</td>
+          </tr>
+          <tr>
+            <td>Speakeasy Prohibition / $6</td>
+            <td>Delirium Tremens (8.6%) / $8</td>
+          </tr>
+          <tr>
+            <td>Lagunitas IPA / $6</td>
+            <td>Stone Sublimely Self-Righteous Ale – 22 oz (8.7%) / $15</td>
+          </tr>
+          <tr>
+            <td>Duvel / $8</td>
+            <td>Lagunitas A Little Sumpin’ Sumpin’ Ale (7.5%) / $6</td>
+          </tr>
+          <tr>
+            <td>Stella – 16.9 oz / $6</td>
+            <td>Epic Imperial Red – 22 oz (7.9%) / $15</td>
+          </tr>
+          <tr>
+            <td>Lucifer – 16.9 oz (8.5%) / $8</td>
+            <td>Tecate – 24 oz / $7</td>
+          </tr>
+          <tr>
+            <td>Epic Big Bad Baptist Imperial Stout – 22 oz (11.1%) / $15</td>
+            <td>Malheur 10 (10%) / $8</td>
+          </tr>
+          <tr>
+            <td>Troeginator (8.2%) / $6</td>
+            <td>Malheur 12 (12%) / $9</td>
+          </tr>
+          <tr>
+            <td>Yuengling / $5</td>
+            <td>Floris Framboise / $8</td>
+          </tr>
+          <tr>
+            <td>Mickey’s / $4</td>
+            <td>Young’s Double Chocolate Stout (pub draft can) – 14.9 oz / $6</td>
+          </tr>
+          <tr>
+            <td>Great Lakes Dortmunder Gold / $6</td>
+            <td>Miller Lite / $5</td>
+          </tr>
+          <tr>
+            <td>Great Lakes Elliott Ness / $6</td>
+            <td>New Beligum Brewing Ranger – 16 oz / $7</td>
+          </tr>
+          <tr>
+            <td>Weihenstephaner Hefe Weissbier / $6</td>
           </tr>
         </table> 
       </div>
@@ -110,48 +188,123 @@
       <div class="modal-body">
         <div class="row">
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="http://jimmyvalentineslhc.com/photos/fullimages/jv_03_f.jpg" download>
-              <img src="http://jimmyvalentineslhc.com/photos/fullimages/jv_03_f.jpg" class="thumbnail img-responsive">
+            <a href=<%= asset_path('jv_01_f.jpg') %> download>
+              <img src=<%= asset_path('jv_01_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            <a href=<%= asset_path('jv_02_f.jpg') %> download>
+              <img src=<%= asset_path('jv_02_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            <a href=<%= asset_path('jv_03_f.jpg') %> download>
+              <img src=<%= asset_path('jv_03_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+           <a href=<%= asset_path('jv_04_f.jpg') %> download>
+              <img src=<%= asset_path('jv_04_f.jpg') %> class="thumbnail img-responsive">
+           </a> 
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_05_f.jpg') %> download>
+              <img src=<%= asset_path('jv_05_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+	  <a href=<%= asset_path('jv_06_f.jpg') %> download>
+              <img src=<%= asset_path('jv_06_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            <a href=<%= asset_path('jv_07_f.jpg') %> download>
+              <img src=<%= asset_path('jv_07_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            <a href=<%= asset_path('jv_08_f.jpg') %> download>
+              <img src=<%= asset_path('jv_08_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            <a href=<%= asset_path('jv_09_f.jpg') %> download>
+              <img src=<%= asset_path('jv_09_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-              <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+            <a href=<%= asset_path('jv_10_f.jpg') %> download>
+              <img src=<%= asset_path('jv_10_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_11_f.jpg') %> download>
+              <img src=<%= asset_path('jv_11_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_12_f.jpg') %> download>
+              <img src=<%= asset_path('jv_12_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_13_f.jpg') %> download>
+              <img src=<%= asset_path('jv_13_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_14_f.jpg') %> download>
+              <img src=<%= asset_path('jv_14_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_15_f.jpg') %> download>
+              <img src=<%= asset_path('jv_15_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_16_f.jpg') %> download>
+              <img src=<%= asset_path('jv_16_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_17_f.jpg') %> download>
+              <img src=<%= asset_path('jv_17_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_18_f.jpg') %> download>
+              <img src=<%= asset_path('jv_18_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_19_f.jpg') %> download>
+              <img src=<%= asset_path('jv_19_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_20_f.jpg') %> download>
+              <img src=<%= asset_path('jv_20_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_21_f.jpg') %> download>
+              <img src=<%= asset_path('jv_21_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_22_f.jpg') %> download>
+              <img src=<%= asset_path('jv_22_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_23_f.jpg') %> download>
+              <img src=<%= asset_path('jv_23_f.jpg') %> class="thumbnail img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-xs-12">
+            <a href=<%= asset_path('jv_24_f.jpg') %> download>
+              <img src=<%= asset_path('jv_24_f.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
         </div>
