@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
+  get 'admin/login'
+
   get 'photo/view'
-
   get 'home/index'
-
+  get 'beers/create'
+  get 'beers/delete'
+  get 'admin/auth'
+  post 'admin/auth'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-
+ 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -16,7 +20,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :beers
 
   # Example resource route with options:
   #   resources :products do
