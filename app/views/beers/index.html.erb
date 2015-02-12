@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <%= form_tag("/beers/create", method: "get") do %>
+      <%= label_tag(:q, "Enter beer name:") %>
+      <%= text_field_tag(:name) %>
+      <br/>
+      <%= label_tag(:q, "Enter beer price:") %>
+      <%= text_field_tag(:price) %>
+      <br/>
+      <%= submit_tag("Add Beer") %>
+      <% end %>
+    </div>
+    <div class="col-sm-8">
+      <%= form_tag("/beers/delete", method: "get") do %>
+      <%= label_tag(:q, "Select beer:") %>
+      <%= select_tag "beer", options_from_collection_for_select(@all_beers, "id", "name") %>
+      <br/>
+      <%= submit_tag("Delete Beer") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
