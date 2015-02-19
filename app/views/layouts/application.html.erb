@@ -197,7 +197,7 @@ DJ Kangal  has been a DJ for 17 years. DJ Kangal spins EBM, Industrial, Indie, E
           <% @all_beers.in_groups_of(2, false) do |beer_row| %>
             <tr>
               <% for beer in beer_row %>
-                <td class="raleway-font"><%= beer.name %> / $<%= beer.price %> </td>
+                <td class="raleway-font"><%= beer.name %> &#8226; $<%= beer.price %> </td>
               <% end %>
             </tr>
           <% end %>  
