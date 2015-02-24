@@ -31,3 +31,58 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'velvet';
+    src: asset-url('velvet.eot');
+    src: asset-url('velvet.eot?#iefix') format('embedded-opentype'),
+           asset-url('velvet.woff') format('woff'),
+           asset-url('velvet.TTF') format('truetype'),
+           asset-url('velvet.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'angilla_tattoo';
+    src: asset-url('angilla_tattoo.eot');
+    src: asset-url('angilla_tattoo.eot?#iefix') format('embedded-opentype'),
+           asset-url('angilla_tattoo.woff') format('woff'),
+           asset-url('angilla_tattoo.ttf') format('truetype'),
+           asset-url('angilla_tattoo.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'coneria_slanted';
+    src: asset-url('coneria_slanted.eot');
+    src: asset-url('coneria_slanted.eot?#iefix') format('embedded-opentype'),
+           asset-url('coneria_slanted.woff') format('woff'),
+           asset-url('coneria_slanted.ttf') format('truetype'),
+           asset-url('coneria_slanted.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hff_ribbon';
+    src: asset-url('hff_ribbon.eot');
+    src: asset-url('hff_ribbon.eot?#iefix') format('embedded-opentype'),
+           asset-url('hff_ribbon.woff') format('woff'),
+           asset-url('hff_ribbon.ttf') format('truetype'),
+           asset-url('hff_ribbon.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'last_king_quest';
+    src: asset-url('last_king_quest.eot');
+    src: asset-url('last_king_quest.eot?#iefix') format('embedded-opentype'),
+           asset-url('last_king_quest.woff') format('woff'),
+           asset-url('last_king_quest.ttf') format('truetype'),
+           asset-url('last_king_quest.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
