@@ -31,8 +31,8 @@
         <li><%= link_to "Calendar", "#calendarModal", :data => {:toggle => "modal"} %></li>
         <li><%= link_to "Beer List", "#beerlistModal", :data => {:toggle => "modal"} %></li>
         <li><%= link_to "Photos", "#photoModal", :data => {:toggle => "modal"} %></li>
-        <li><%= link_to "Location", "#locationModal", :data => {:toggle => "modal"} %></li>
-        <li><%= link_to "DJ Info", "#djModal", :data => {:toggle => "modal"} %></li>
+        <li><%= link_to "Hours & Location", "#locationModal", :data => {:toggle => "modal"} %></li>
+        <!--<li><%= link_to "DJ Info", "#djModal", :data => {:toggle => "modal"} %></li>-->
       </ul>
     </div> 
   </div> 
@@ -70,7 +70,6 @@
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-
 <!-- Location Modal-->
 <div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -82,7 +81,11 @@
       <div class="modal-body raleway-font">
         <center><h4>Look for the pink halo over the door at</h4>
         <center><h3>1103 Bladensburg Road NE</h3></center>
-        <center><img src=<%= asset_path('jv_map.png') %> class="thumbnail img-responsive"></center>
+        <!--<center><img src=<%= asset_path('jv_map.png') %> class="thumbnail img-responsive"></center>-->
+        <!--<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.8768238958655!2d-76.98063300000001!3d38.903932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b869428e2ad9%3A0x48e7f9964976dc4c!2sJimmy+Valentine&#39;s+Lonely+Hearts+Club!5e0!3m2!1sen!2sus!4v1426612988769&z=9" width="500" height="450" frameborder="0" style="border:0"></iframe></center>-->
+       <div class="embed-responsive embed-responsive-4by3"> 
+<center><iframe width="500" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Jimmy%20Valentine's%20Lonely%20Hearts%20Club%2C%20Bladensburg%20Road%20Northeast%2C%20Washington%2C%20DC%2C%20United%20States&key=AIzaSyB10mSwxhOZ62Tr4KuRmKQePYyrFE-JmDY&zoom=15&center=38.903890,-76.980549"></iframe></center>
+       </div>
         <center>
           <table width="300">
             <tr>
@@ -265,7 +268,8 @@ DJ Kangal  has been a DJ for 17 years. DJ Kangal spins EBM, Industrial, Indie, E
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title wonderlust-font" id="myModalLabel">Photos</h4>
+        <h4 class="modal-title wonderlust-font" id="myModalLabel">Photos</h4><br/>
+        <h5 class="modal-title raleway-font" id="myModalLabel"><i>Click to download high-res photos</i></h5>
       </div>
       <div class="modal-body">
         <div class="row">
