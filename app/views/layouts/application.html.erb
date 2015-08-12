@@ -228,33 +228,19 @@ DJ Kangal  has been a DJ for 17 years. DJ Kangal spins EBM, Industrial, Indie, E
         <h4 class="modal-title wonderlust-font" id="myModalLabel">Calendar</h4>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="calendar-event raleway-font">
-              <b>S 2/28 (JV'S) Nav & Meegs</b>
-            </div>
-          <br/>
-          </div>
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="calendar-event raleway-font">
-              <span><b>F 3/6 (JV's) Pray for Dance w/ DJ Steeple</b></span>
-            </div>
-          <br/>
-          </div>
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="calendar-event raleway-font">
-              <span><b>S 3/7 (JV’s) Sinister Intelligence Agency (Joe & Alex)</b></span>
-            </div>
-          <br/>
-          </div>
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="calendar-event raleway-font">
-              <span><b>F 3/20 (JV’s) Freefall (Jeff Hancock’s bday)</b></span>
-            </div>
-          <br/>
-          </div>
-        </div>
-      </div>
+	<% @all_calendar_items.in_groups_of(2, false)  do |calendar_item| %>
+	  <% for entry in calendar_item %>
+	  <div class="row calendar-event raleway-font" >
+           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-left">
+               <img src=<%= asset_path(entry.path) %>  class="img-responsive">
+           </div>
+	   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	      <div style="padding-top: 14px"<b> <%= entry.date %>  <%= entry.event %> </b> </div>
+	   </div>
+	  </div><br/>
+          <% end %>
+        <% end %>
+      </div> 
       <div class="modal-footer">
         <button type="button" class="btn btn-default wonderlust-font" data-dismiss="modal">Close</button>
       </div>
@@ -275,7 +261,7 @@ DJ Kangal  has been a DJ for 17 years. DJ Kangal spins EBM, Industrial, Indie, E
         <div class="row">
           <div class="col-lg-4 col-sm-6 col-xs-12">
             <a href=<%= asset_path('jv_01.jpg.zip') %> download>
-              <img src=<%= asset_path('jv_01_f.jpg') %> class="thumbnail img-responsive">
+              <img src=<%= asset_path('jv_01.jpg') %> class="thumbnail img-responsive">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-xs-12">

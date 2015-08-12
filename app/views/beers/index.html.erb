@@ -20,5 +20,36 @@
       <% end %>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <%= form_tag("/beers/newCal", method: "get", multipart: true) do %>
+      <%= label_tag(:q, "Enter date (dd/mm): ") %>
+      <%= text_field_tag(:date) %>
+      <br/>
+      <%= label_tag(:q, "Enter event name: ") %>
+      <%= text_field_tag(:event) %>
+      <br/>
+      <%= label_tag(:q, "Enter image name: ") %>
+      <%= text_field_tag(:image_name) %>
+      <br/>
+      <%= submit_tag("Create Calendar Event") %>
+      <br /> <br />
+      <% end %>
+      <%= form_tag({action: :upload},  multipart: true) do %>
+        <%= file_field_tag 'picture' %>
+        <%= submit_tag 'Save' %>
+      <% end %>
+
+    </div>
+    <div class="col-sm-6">
+      <%= form_tag("/beers/delCal", method: "get") do %>
+      <%= label_tag(:q, "Select event:") %>
+      <%= select_tag "event", options_from_collection_for_select(@all_calendar_items, "id", "event") %>
+      <br/>
+      <%= submit_tag("Delete Event") %>
+      <% end %>
+    </div>
+  </div>
 </div>
 

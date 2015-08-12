@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'admin/login'
-
+  post 'beers/upload', to: 'beers#upload'
+  get 'beers/delCal'
+  get 'beers/newCal'
   get 'photo/view'
   get 'home/index'
   get 'beers/create'
