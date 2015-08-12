@@ -78,20 +78,15 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title wonderlust-font" id="myModalLabel">Location</h4>
       </div>
-      <div class="modal-body raleway-font">
-        <center><h4>Look for the pink halo over the door at</h4>
+      <div class="modal-body raleway-font" style="color: lightgray">>
+        <center><h4>Look for the pink halo over the door at</h4></center>
         <center><h3>1103 Bladensburg Road NE</h3></center>
-        <!--<center><img src=<%= asset_path('jv_map.png') %> class="thumbnail img-responsive"></center>-->
-        <!--<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.8768238958655!2d-76.98063300000001!3d38.903932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b869428e2ad9%3A0x48e7f9964976dc4c!2sJimmy+Valentine&#39;s+Lonely+Hearts+Club!5e0!3m2!1sen!2sus!4v1426612988769&z=9" width="500" height="450" frameborder="0" style="border:0"></iframe></center>-->
        <div class="embed-responsive embed-responsive-4by3"> 
 <center><iframe width="500" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Jimmy%20Valentine's%20Lonely%20Hearts%20Club%2C%20Bladensburg%20Road%20Northeast%2C%20Washington%2C%20DC%2C%20United%20States&key=AIzaSyB10mSwxhOZ62Tr4KuRmKQePYyrFE-JmDY&zoom=15&center=38.903890,-76.980549"></iframe></center>
        </div>
+       <br />
         <center>
-          <table width="300">
-            <tr>
-              <th>Day</th>
-              <th>Hours</th>
-            </tr>
+          <table width="300" >
             <tr>
               <td>Monday</td>
               <td>10pm - 2am</td>
@@ -230,12 +225,12 @@ DJ Kangal  has been a DJ for 17 years. DJ Kangal spins EBM, Industrial, Indie, E
       <div class="modal-body">
 	<% @all_calendar_items.in_groups_of(2, false)  do |calendar_item| %>
 	  <% for entry in calendar_item %>
-	  <div class="row calendar-event raleway-font" >
+	  <div class="row calendar-event raleway-font">
            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-left">
                <img src=<%= asset_path(entry.path) %>  class="img-responsive">
            </div>
 	   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-	      <div style="padding-top: 14px"<b> <%= entry.date %>  <%= entry.event %> </b> </div>
+	      <div style="padding-top: 0px"><span style="font-size: 70%"> <%= entry.date %></span><br /><b><%= entry.event %> </b> </div>
 	   </div>
 	  </div><br/>
           <% end %>
